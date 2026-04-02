@@ -1,0 +1,92 @@
+.section { background: var(--deep-blue); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+.card {
+  background: linear-gradient(145deg, rgba(10,25,60,0.8), rgba(6,13,32,0.9));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 28px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  border-color: var(--border-bright);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,100,200,0.2);
+}
+.featured {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 40px rgba(0,212,255,0.15), inset 0 1px 0 rgba(0,212,255,0.2);
+}
+.popularBadge {
+  position: absolute;
+  top: 20px; right: -30px;
+  background: linear-gradient(135deg, #00d4ff, #1e6fff);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+}
+.cat {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.2);
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.price {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.price span { font-size: 1rem; font-weight: 400; color: var(--text-secondary); }
+.period {
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  margin-bottom: 20px;
+}
+.features {
+  list-style: none;
+  margin-bottom: 28px;
+}
+.features li {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.features li::before {
+  content: '✓';
+  color: var(--accent-cyan);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.renewNote {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-cyan);
+  margin-top: 40px;
+  padding: 16px 24px;
+  background: rgba(0,212,255,0.05);
+  border: 1px solid rgba(0,212,255,0.15);
+  border-radius: 8px;
+}
+.renewNote strong { color: var(--text-primary); }
